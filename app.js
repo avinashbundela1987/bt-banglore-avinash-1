@@ -24,6 +24,19 @@ function describeCode(code) {
   return "Unknown conditions";
 }
 
+function emojiForCode(code) {
+  if (code === 0) { return "☀️"; }
+  if (code === 1 || code === 2) { return "⛅"; }
+  if (code === 3) { return "☁️"; }
+  if (code === 45 || code === 48) { return "🌫️"; }
+  if (code >= 51 && code <= 57) { return "🌦️"; }
+  if (code >= 61 && code <= 67) { return "🌧️"; }
+  if (code >= 71 && code <= 77) { return "❄️"; }
+  if (code >= 80 && code <= 82) { return "🌧️"; }
+  if (code >= 95 && code <= 99) { return "⛈️"; }
+  return "";
+}
+
 function formatValue(value, unit) {
   if (value === null || value === undefined) {
     return "N/A";
@@ -33,8 +46,21 @@ function formatValue(value, unit) {
 
 function showText(message) {
   var result = document.getElementById("result");
-  result.textContent = "";
+  lastWeather = null;
   result.textContent = message;
+}
+
+var useFahrenheit = false;
+var lastWeather = null;
+
+function formatTemp(celsius, unit) {
+  if (celsius === null || celsius === undefined) {
+    return "N/A";
+  }
+  if (useFahrenheit) {
+    return (Math.round((celsius * 9 / 5 + 32) * 10) / 10) + "°F";
+  }
+  return formatValue(celsius, unit);
 }
 
 function showWeather(place, current, units, description) {
@@ -42,11 +68,12 @@ function showWeather(place, current, units, description) {
   result.textContent = "";
   current = current || {};
   units = units || {};
+  lastWeather = { place: place, current: current, units: units, description: description };
   var lines = [
     ["Place", place],
     ["Conditions", description],
-    ["Temperature", formatValue(current.temperature_2m, units.temperature_2m)],
-    ["Feels like", formatValue(current.apparent_temperature, units.apparent_temperature)],
+    ["Temperature", formatTemp(current.temperature_2m, units.temperature_2m)],
+    ["Feels like", formatTemp(current.apparent_temperature, units.apparent_temperature)],
     ["Humidity", formatValue(current.relative_humidity_2m, units.relative_humidity_2m)],
     ["Wind speed", formatValue(current.wind_speed_10m, units.wind_speed_10m)],
     ["Precipitation", formatValue(current.precipitation, units.precipitation)]
@@ -129,13 +156,24 @@ async function getWeather() {
       return;
     }
 
-    showWeather(place.display_name, data.current, data.current_units, describeCode(data.current.weather_code));
+    showWeather(place.display_name, data.current, data.current_units, (emojiForCode(data.current.weather_code) + " " + describeCode(data.current.weather_code)).trim());
   } finally {
     busy = false;
   }
 }
 
 document.getElementById("go").addEventListener("click", getWeather);
+document.getElementById("unit").addEventListener("click", function () {
+  useFahrenheit = !useFahrenheit;
+  this.textContent = useFahrenheit ? "Show °C" : "Show °F";
+  if (lastWeather) {
+    showWeather(lastWeather.place, lastWeather.current, lastWeather.units, lastWeather.description);
+  }
+});
+document.getElementById("theme").addEventListener("click", function () {
+  var dark = document.body.classList.toggle("dark");
+  this.textContent = dark ? "Light mode" : "Dark mode";
+});
 document.getElementById("city").addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
     getWeather();

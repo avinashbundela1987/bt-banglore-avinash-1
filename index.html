@@ -12,12 +12,17 @@
     #result { margin-top: 20px; min-height: 120px; }
     #result p { margin: 6px 0; }
     footer { margin-top: 30px; font-size: 0.8rem; color: #666; }
+    body.dark { background: #1e1e1e; color: #eee; }
+    body.dark input, body.dark button { background: #333; color: #eee; border: 1px solid #666; }
+    body.dark footer { color: #aaa; }
   </style>
 </head>
 <body>
   <h1>India Weather</h1>
   <input id="city" type="text" placeholder="Enter a city in India">
   <button id="go">Get Weather</button>
+  <button id="unit">Show °F</button>
+  <button id="theme">Dark mode</button>
   <div id="result"></div>
   <footer>Weather data: Open-Meteo. Location data: OpenStreetMap Nominatim.</footer>
   <script src="app.js"></script>
