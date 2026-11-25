@@ -1,0 +1,114 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1. Write bug condition exploration check": [
+      {
+        "executionId": "72abbdb6-a082-412a-b717-07d50a591220",
+        "chatSessionId": "sess_0d8d4e03-1944-424f-b75e-ea8bcb711741",
+        "timestamp": 1795519076440
+      },
+      {
+        "executionId": "72abbdb6-a082-412a-b717-07d50a591220",
+        "chatSessionId": "sess_0d8d4e03-1944-424f-b75e-ea8bcb711741",
+        "timestamp": 1795519084087
+      },
+      {
+        "executionId": "72abbdb6-a082-412a-b717-07d50a591220",
+        "chatSessionId": "sess_0d8d4e03-1944-424f-b75e-ea8bcb711741",
+        "timestamp": 1795519128448
+      }
+    ],
+    "2. Write preservation checks (BEFORE implementing fix)": [
+      {
+        "executionId": "72abbdb6-a082-412a-b717-07d50a591220",
+        "chatSessionId": "sess_0d8d4e03-1944-424f-b75e-ea8bcb711741",
+        "timestamp": 1795519076604
+      },
+      {
+        "executionId": "72abbdb6-a082-412a-b717-07d50a591220",
+        "chatSessionId": "sess_0d8d4e03-1944-424f-b75e-ea8bcb711741",
+        "timestamp": 1795519084766
+      },
+      {
+        "executionId": "72abbdb6-a082-412a-b717-07d50a591220",
+        "chatSessionId": "sess_0d8d4e03-1944-424f-b75e-ea8bcb711741",
+        "timestamp": 1795519129577
+      }
+    ],
+    "3.1 Implement the fix": [
+      {
+        "executionId": "72abbdb6-a082-412a-b717-07d50a591220",
+        "chatSessionId": "sess_0d8d4e03-1944-424f-b75e-ea8bcb711741",
+        "timestamp": 1795519076717
+      },
+      {
+        "executionId": "72abbdb6-a082-412a-b717-07d50a591220",
+        "chatSessionId": "sess_0d8d4e03-1944-424f-b75e-ea8bcb711741",
+        "timestamp": 1795519133397
+      },
+      {
+        "executionId": "72abbdb6-a082-412a-b717-07d50a591220",
+        "chatSessionId": "sess_0d8d4e03-1944-424f-b75e-ea8bcb711741",
+        "timestamp": 1795519154693
+      }
+    ],
+    "3.2 Verify bug condition exploration check now passes": [
+      {
+        "executionId": "72abbdb6-a082-412a-b717-07d50a591220",
+        "chatSessionId": "sess_0d8d4e03-1944-424f-b75e-ea8bcb711741",
+        "timestamp": 1795519076807
+      },
+      {
+        "executionId": "72abbdb6-a082-412a-b717-07d50a591220",
+        "chatSessionId": "sess_0d8d4e03-1944-424f-b75e-ea8bcb711741",
+        "timestamp": 1795519158330
+      },
+      {
+        "executionId": "72abbdb6-a082-412a-b717-07d50a591220",
+        "chatSessionId": "sess_0d8d4e03-1944-424f-b75e-ea8bcb711741",
+        "timestamp": 1795519256514
+      }
+    ],
+    "3.3 Verify preservation checks still pass": [
+      {
+        "executionId": "72abbdb6-a082-412a-b717-07d50a591220",
+        "chatSessionId": "sess_0d8d4e03-1944-424f-b75e-ea8bcb711741",
+        "timestamp": 1795519076884
+      },
+      {
+        "executionId": "72abbdb6-a082-412a-b717-07d50a591220",
+        "chatSessionId": "sess_0d8d4e03-1944-424f-b75e-ea8bcb711741",
+        "timestamp": 1795519158860
+      },
+      {
+        "executionId": "72abbdb6-a082-412a-b717-07d50a591220",
+        "chatSessionId": "sess_0d8d4e03-1944-424f-b75e-ea8bcb711741",
+        "timestamp": 1795519256961
+      }
+    ],
+    "4. Checkpoint - Ensure all checks pass": [
+      {
+        "executionId": "72abbdb6-a082-412a-b717-07d50a591220",
+        "chatSessionId": "sess_0d8d4e03-1944-424f-b75e-ea8bcb711741",
+        "timestamp": 1795519076970
+      },
+      {
+        "executionId": "72abbdb6-a082-412a-b717-07d50a591220",
+        "chatSessionId": "sess_0d8d4e03-1944-424f-b75e-ea8bcb711741",
+        "timestamp": 1795519261209
+      },
+      {
+        "executionId": "72abbdb6-a082-412a-b717-07d50a591220",
+        "chatSessionId": "sess_0d8d4e03-1944-424f-b75e-ea8bcb711741",
+        "timestamp": 1795519411342
+      }
+    ],
+    "3. Fix for Open-Meteo HTTP 400 on every weather lookup": [
+      {
+        "executionId": "72abbdb6-a082-412a-b717-07d50a591220",
+        "chatSessionId": "sess_0d8d4e03-1944-424f-b75e-ea8bcb711741",
+        "timestamp": 1795519257107
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "local-docs": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:\\AWS-Training-Docs",
+        "C:\\MCP-Demo-Docs"
+      ],
+      "disabled": false,
+      "disabledTools": []
+    },
+    "aws-knowledge": {
+      "url": "https://knowledge-mcp.global.api.aws",
+      "disabled": false
+    }
+  }
+}
